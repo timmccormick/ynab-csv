@@ -29,7 +29,7 @@ class window.DataObject
 
   # Parse base csv file as JSON. This will be easier to work with.
   # It uses http://papaparse.com/ for handling parsing
-  parse_csv: (csv) -> @base_json = Papa.parse(csv, {"header": true})
+  parse_csv: (csv) -> @base_json = Papa.parse(csv, {"header": true, dynamicTyping: true})
   fields: -> @base_json.meta.fields
   rows: -> @base_json.data
 
